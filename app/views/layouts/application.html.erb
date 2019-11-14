@@ -12,15 +12,21 @@
 
   <body>
     <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand" href="#">Stable Buddy</a>
+      <%= link_to "Stable Buddy", root_path, class: "navbar-brand" %>
       <form class="form-inline">
-        <a class="nav-item nav-link" href="#">Horses</a>
+        <%= link_to "Horses", horses_path, class: "nav-item nav-link" %>
         <a class="nav-item nav-link" href="#">Schedules</a>
         <a class="nav-item nav-link" href="#">Lists</a>
         <a class="nav-item nav-link" href="#">Sign Up</a>
       </form>
     </nav>
 
+    <% if notice.present? %>
+      <p class="alert alert-info"><%= notice %></p>
+    <% end %>
+    <% if alert.present? %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
 
 
 
