@@ -18,11 +18,18 @@
         <a class="nav-item nav-link" href="#">Schedules</a>
         <a class="nav-item nav-link" href="#">Lists</a>
         <ul class="nav-item nav-link">
-          <% if user_signed_in? %>
+          <% if current_user %>
+            You're signed in as <%= current_user.email %>.
             <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
           <% else %>
             <%= link_to 'Sign In', new_user_session_path, class: 'nav-link' %>
             <%= link_to 'Sign Up', new_user_registration_path, class: 'nav-link' %>
+          <% end %>
+          <% if notice.present? %>
+            <p class="notice"><%= notice %></p>
+          <% end %>
+          <% if alert.present? %>
+            <p class="alert"><%= alert %></p>
           <% end %>
         </ul>
       </form>
