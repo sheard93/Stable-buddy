@@ -17,7 +17,7 @@ RSpec.describe HorsesController, type: :controller do
 
   describe "horses#create action" do
     it "should successfully create a new horse in the database" do
-      post :create, params: { horse: { message: "Hello!" } }
+      post :create, params: { horse: { name: "Hello!" } }
       expect(response).to redirect_to root_path
       horse = Horse.last
       expect(horse.name).to eq("Hello!")

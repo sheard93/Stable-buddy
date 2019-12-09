@@ -1,1 +1,9 @@
 <h1>New Horse</h1>
+
+<%= simple_form_for @horse do |f| %>
+  <%= f.input :name %>
+  <%= f.input :owner %>
+  <%= f.input :age %>
+  <%= f.input :breed %>
+  <%= f.submit "Submit" %>
+<% end %>
