@@ -22,7 +22,8 @@ class HorsesController < ApplicationController
   end
 
   def index
-
+    @horses = Horse.all
+    
   end
 
   def new

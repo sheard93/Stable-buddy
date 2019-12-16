@@ -43,3 +43,13 @@ body {
   
 }
 
+.hero {
+  background: image_url('hero.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 600px;
+  margin: 15px;
+}
+

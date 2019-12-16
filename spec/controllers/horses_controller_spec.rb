@@ -38,7 +38,7 @@ RSpec.describe HorsesController, type: :controller do
       horse = FactoryBot.create(:horse)
       user= FactoryBot.create(:user)
       sign_in user
-      patch :update, params: { id: horse.id, horse: { name: 'Wahoo' } }
+      patch :update, params: { id: horse.id, horse: { name: 'Wahoo', age: 8 , breed: 'Thoroughbred' } }
       expect(response).to have_http_status(:forbidden)
     end
 
@@ -67,7 +67,7 @@ RSpec.describe HorsesController, type: :controller do
 
     it "should render the edit form with an http status of unprocessable_entity" do
       horse = FactoryBot.create(:horse, name: "Initial Value")
-      sign_in user 
+      sign_in horse.user 
       patch :update, params: { id: horse.id, horse: { name: '' } }
       expect(response).to have_http_status(:unprocessable_entity)
       horse.reload

@@ -1,1 +1,13 @@
-<%= @horse.inspect %>
+<div class="booyah-horse">
+  <%= @horse.name %>
+  <%= @horse.owner %>
+  <%= @horse.age %>
+  <%= @horse.breed %>
+</div>
+
+<div class="float-right">
+    <% if current_user && current_user == @horse.user %>
+      <%= link_to 'Edit', edit_horse_path(@horse), class: 'btn btn-primary' %>
+      <%= link_to 'Destroy', horse_path(@horse), method: :delete, data: {confirm: 'Are you sure you want to delete this?'},class: 'btn btn-danger' %>
+    <% end %>    
+  </div>

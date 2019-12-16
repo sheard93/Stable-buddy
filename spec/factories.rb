@@ -8,7 +8,7 @@ FactoryBot.define do
   end
 
   factory :horse do
-    message { "hello" }
+    name { "hello" }
     association :user
   end
 end
