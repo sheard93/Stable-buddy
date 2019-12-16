@@ -11,4 +11,9 @@ FactoryBot.define do
     name { "hello" }
     association :user
   end
+
+  factory :item do
+    description { "Order Hay" }
+    done { false }
+  end
 end

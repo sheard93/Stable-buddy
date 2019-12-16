@@ -53,7 +53,7 @@ class HorsesController < ApplicationController
   private
 
   def horse_params
-    params.require(:horse).permit(:name, :owner, :age, :breed)
+    params.require(:horse).permit(:name, :owner, :age, :breed, :picture)
   end
 
   def render_not_found(status=:not_found)
