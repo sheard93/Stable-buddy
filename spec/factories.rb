@@ -13,7 +13,7 @@ FactoryBot.define do
   end
 
   factory :item do
-    description { "Order Hay" }
+    title { "Order Hay" }
     done { false }
   end
 end

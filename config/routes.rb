@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root "info#index"
   resources :horses
-  resources :lists, only: [:index, :new]
+  resources :items, only: [:index]
   resources :gallery, only: [:index]
     
 
