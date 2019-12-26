@@ -1,1 +1,19 @@
-<h1>List</h1>
+<section class="listapp">
+  <header class="header">
+    <h1>List</h1>
+    <input class="new-item" placeholder="What needs to be ordered" autofocus="">
+  </header>
+  <section class="main">
+    <ul class="list">
+      <% @items.each do |item| %>      
+        <li>
+          <div class="view">
+            <input class="toggle" type="checkbox">
+            <label><%= item.title %></label>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </section>
+</section>
+

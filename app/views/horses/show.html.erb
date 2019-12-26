@@ -1,8 +1,12 @@
 <div class="booyah-horse">
-  <%= @horse.name %>
-  <%= @horse.owner %>
-  <%= @horse.age %>
-  <%= @horse.breed %>
+  <% if @horse.photo_url %>
+    <%= image_tag(@horse.photo_url) %><br />
+  <% end %>
+  Name: <%= @horse.name %><br />
+  Owner: <%= @horse.owner %><br />
+  Age: <%= @horse.age %><br />
+  Breed: <%= @horse.breed %><br />
+
 </div>
 
 <div class="float-right">

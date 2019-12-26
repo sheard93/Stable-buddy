@@ -44,7 +44,7 @@ class HorsesController < ApplicationController
   def create
     @horse = current_user.horses.create(horse_params)
     if @horse.valid?
-      redirect_to root_path
+      redirect_to horse_path(@horse)
     else
       render :new, status: :unprocessable_entity
     end
@@ -53,7 +53,7 @@ class HorsesController < ApplicationController
   private
 
   def horse_params
-    params.require(:horse).permit(:name, :owner, :age, :breed, :picture)
+    params.require(:horse).permit(:name, :owner, :age, :breed, :photo)
   end
 
   def render_not_found(status=:not_found)

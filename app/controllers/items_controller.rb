@@ -1,7 +1,9 @@
 class ItemsController < ApplicationController
 
+
   def index
-    render json: Item.all
+    @items = Item.all
+    # @items = current_user.items
   end
 
 end
