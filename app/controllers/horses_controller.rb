@@ -22,7 +22,7 @@ class HorsesController < ApplicationController
   end
 
   def index
-    @horses = Horse.all
+    @horses = current_user.horses
     
   end
 
