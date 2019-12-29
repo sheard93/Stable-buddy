@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root "info#index"
   resources :horses
   resources :items, only: [:index]
-  resources :gallery, only: [:index]
+  resources :gallery, only: [:index, :new]
     
 
 
