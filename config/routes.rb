@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root "info#index"
   get "/list", to:"info#list"
   resources :horses
-  resources :items, only: [:index]
+  resources :items, only: [:index, :update, :create]
   resources :gallery, only: [:index, :new]
     
 

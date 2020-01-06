@@ -9,6 +9,7 @@ class ItemsController < ApplicationController
   def update
     item = Item.find(params[:id])
     item.update_attributes(item_params)
+    
     render json: item
   end
 

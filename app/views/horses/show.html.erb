@@ -1,11 +1,13 @@
 <div class="booyah-horse">
-  <% if @horse.photo_url %>
-    <%= image_tag(@horse.photo_url) %><br />
-  <% end %>
-  Name: <%= @horse.name %><br />
-  Owner: <%= @horse.owner %><br />
-  Age: <%= @horse.age %><br />
-  Breed: <%= @horse.breed %><br />
+  <div class="horse-image"> 
+    <% if @horse.photo_url %>
+      <%= image_tag(@horse.photo_url) %><br />
+    <% end %>
+  </div>
+    Name: <%= @horse.name %><br />
+    Owner: <%= @horse.owner %><br />
+    Age: <%= @horse.age %><br />
+    Breed: <%= @horse.breed %><br />
 
 </div>
 

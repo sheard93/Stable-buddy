@@ -5,6 +5,9 @@ class GalleryController < ApplicationController
     @gallery_images = GalleryImage.all
   end
 
+  def new
+    @gallery_images = GalleryImage.new
+  end
   
 
 
