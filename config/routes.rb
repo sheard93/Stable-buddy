@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get "/list", to:"info#list"
   resources :horses
   resources :items, only: [:index, :update, :create]
-  resources :gallery, only: [:index, :new, :create]
+  resources :gallery_images, only: [:index, :new, :create]
     
 
 

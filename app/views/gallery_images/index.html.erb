@@ -1,0 +1,16 @@
+<h1>Gallery</h1>
+
+<div class="new-image">
+  <%= link_to "Add an Image", new_gallery_image_path, class: "nav-item nav-link" %>
+</div>
+
+
+<div class="booyah-gallery">
+  <% @gallery_images.each do |gallery_image| %>
+    <div class="booyah-box col-10 offset-1">
+      <%= image_tag(gallery_images_url) %>
+    </div>
+  <% end %>
+</div>
+
+
